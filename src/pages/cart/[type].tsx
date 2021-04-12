@@ -21,6 +21,8 @@ import {
 import Button from '@/components/Button';
 import formatBRL from '@/utils/formatBRL';
 import Product from '@/components/Product';
+import Modal from '@/components/Modal';
+import { useState } from 'react';
 
 interface ICartProps {
   data: typeof acima10Reais;
@@ -43,6 +45,11 @@ export const getServerSideProps: GetServerSideProps<ICartProps> = async ({ param
 };
 
 const Cart: React.FC<ICartProps> = ({ data }) => {
+  const [isModalShow, setIsModalShow] = useState(false);
+
+  const handleSubmit = (): void => {
+    setIsModalShow(true);
+  };
   return (
     <>
       <Head>
@@ -79,10 +86,15 @@ const Cart: React.FC<ICartProps> = ({ data }) => {
           </WrapperTotal>
           <Separator />
           <WrapperButton>
-            <Button label="Finalizar compra" />
+            <Button onClick={handleSubmit} label="Finalizar compra" />
           </WrapperButton>
         </Card>
       </Container>
+      <Modal
+        show={isModalShow}
+        title="Compra realizada com Sucesso!"
+        buttonTitle="Realizar nova compra"
+      />
     </>
   );
 };
