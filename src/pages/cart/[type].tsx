@@ -19,7 +19,7 @@ import {
   WrapperButton,
 } from '@/styles/Pages/Cart';
 import Button from '@/components/Button';
-import formatBRL from '@/helpers/formatBRL';
+import formatBRL from '@/utils/formatBRL';
 import Product from '@/components/Product';
 
 interface ICartProps {

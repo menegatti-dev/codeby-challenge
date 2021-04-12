@@ -1,4 +1,4 @@
-import formatBRL from '@/helpers/formatBRL';
+import formatBRL from '@/utils/formatBRL';
 
 import { Container, Image, WrapperInfo, Name, SellingPrice, ListPrice } from './styles';
 
