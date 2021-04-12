@@ -1,11 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.button`
-  height: 78px;
-  width: 100%;
+interface IContainerProps {
+  size: 'small' | 'medium';
+}
+
+const sizeValues = {
+  small: css`
+    height: 55px;
+    max-width: 100%;
+  `,
+  medium: css`
+    height: 78px;
+    width: 100%;
+  `,
+};
+
+export const Container = styled.button<IContainerProps>`
+  ${({ size }) => sizeValues[size]}
+  max-width: 100%;
   border: none;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 0 20px;
   background: #3b74f2;
   text-transform: uppercase;
   cursor: pointer;
@@ -24,8 +39,8 @@ export const Container = styled.button`
   }
 `;
 
-export const Label = styled.span`
+export const Label = styled.span<IContainerProps>`
   color: #fff;
-  font-size: 2.6rem;
+  font-size: ${({ size }) => (size === 'medium' ? '2.6rem' : '1.8rem')};
   font-weight: bold;
 `;
