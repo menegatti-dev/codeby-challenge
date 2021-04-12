@@ -26,6 +26,32 @@ yarn build
 yarn start
 ```
 
+## Screenshots
+
+### Home
+<div align="center">
+  <img src="screenshots/home.png" />
+  <br /> <br />
+</div>
+
+### Cart
+<div align="center">
+  <img src="screenshots/cart-1.png" />
+    <br /> <br />
+</div>
+
+### Cart Free Shipping
+<div align="center">
+   <img src="screenshots/cart-2.png" />
+     <br /> <br />
+</div>
+
+### Cart Modal
+<div align="center">
+   <img src="screenshots/cart-modal.png" />
+     <br /> <br />
+</div>
+
 ## License
 
 The [MIT License]() (MIT)
