@@ -56,16 +56,18 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #root {
-    width: 100%;
-    min-height: 100vh;
-  }
-
-  body {
-    background-color: white;
-    background: #fff;
-    -webkit-font-smoothing: antialiased !important;
-  }
-
   
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased !important;
+    background: #d1d8e5;
+  }
+
+  #__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
 `;
